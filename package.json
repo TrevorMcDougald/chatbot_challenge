@@ -1,0 +1,16 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Routefusion Coding Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Routefusion",
+    "Chatbot"
+  ],
+  "author": "Trevor McDougald",
+  "license": "ISC"
+}
