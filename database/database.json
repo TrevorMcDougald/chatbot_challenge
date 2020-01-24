@@ -2,7 +2,8 @@
     "userHistory": [
         "Trevor",
         "test",
-        "hi"
+        "hi",
+        "trevor"
     ],
     "messages": {
         "hi": "Hi, how are you?",
@@ -10,6 +11,7 @@
         "by": "Sorry, I don't understand.",
         "good": "Sorry, I don't understand.",
         "garbled": "Sorry, I don't understand.",
-        "hg": "Sorry, I don't understand."
+        "hg": "Sorry, I don't understand.",
+        "okay i guess": "Sorry, I don't understand."
     }
 }
