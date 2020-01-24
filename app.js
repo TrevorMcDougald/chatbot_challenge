@@ -1,4 +1,6 @@
 const ChatBot = require('./chatbot/chatbot');
 
 const app = new ChatBot;
-app.start();
+app.connect().then( () => {
+  app.run();
+});

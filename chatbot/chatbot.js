@@ -15,21 +15,19 @@ class ChatBot extends EventEmitter {
     this.user = null;
   }
 
-  async start() {
+  async connect() {
     process.stdout.write('Welcome to Routefusion Chat!\n\n');
     // this.user = await this.getUser();
-    this.user = await this.getUser();
+    this.user = await this.setUser();
     await this.greetUser();
-
-    while (true) {
-      await this.run();
-    }
   }
 
   async run() {
-    const userInput = await this.getMessage();
-    const response = this.handleMessage(userInput);
-    this.handleResponse(response);
+    while (true) {
+      const userInput = await this.getMessage();
+      const response = this.handleMessage(userInput);
+      this.handleResponse(response);
+    }
   }
 
   handleMessage(message) {
@@ -53,8 +51,7 @@ class ChatBot extends EventEmitter {
     process.stdout.write('\n' + response + '\n\n');
   }
 
-  async getUser() {
-    // process.stdout.write('What\'s your username?\n');
+  async setUser() {
     return Message.promptedMessage('What\'s your username?\n\n> ');
   }
 

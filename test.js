@@ -11,7 +11,7 @@ assert(testBot.handleMessage('hi') === 'Hi, how are you?',
 assert(testBot.handleMessage('garbled') === 'Sorry, I don\'t understand.',
   'The response returned from any other garbled message: \'Sorry, I don\'t understand.\'');
 
-testBot.start().then( () => {
+testBot.connect().then( () => {
   assert.notEqual(testBot.user, null,
     'The username won\'t be null after completion');
 });
