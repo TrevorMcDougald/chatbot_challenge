@@ -1,7 +1,3 @@
-// Sometimes creating a new observable object directly from the EventEmitter class is not
-// enough. Because this makes it impracticable to provide functionality that goes beyond the
-// mere production of new events.
-
 const EventEmitter = require('events').EventEmitter;
 const Channel = require('./channel');
 const database = require('../database/database');
