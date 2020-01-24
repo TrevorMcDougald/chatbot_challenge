@@ -1,0 +1,13 @@
+{
+    "userHistory": [
+        "Trevor",
+        "test"
+    ],
+    "messages": {
+        "hi": "Hi, how are you?",
+        "ok": "Sorry, I don't understand.",
+        "by": "Sorry, I don't understand.",
+        "good": "Sorry, I don't understand.",
+        "garbled": "Sorry, I don't understand."
+    }
+}

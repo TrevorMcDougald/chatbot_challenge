@@ -1,3 +1,21 @@
+# Requirments
+- Node v10
+- git
+
+# Common setup
+Clone the repository, no other dependencies besides plain ol' Node.
+```bash
+git clone https://github.com/TrevorMcDougald/chatbot_challenge.git
+cd chatbot_challenge
+```
+
+# Start & Test
+```bash
+$ npm start
+$ npm test
+```
+
+# Design Requirements
 1. Use plain ol’ Node
 2. Unit testing is expected, and I can run the tests using npm test
 3. Command to start chat program is npm start
@@ -15,5 +33,3 @@
     don’t understand.”
 11. I should then be able to type the message “exit” and receive the response “Goodbye,
     <username>!”, followed by the program exiting gracefully.
-
-# Node.js Help:
