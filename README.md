@@ -15,3 +15,5 @@
     don’t understand.”
 11. I should then be able to type the message “exit” and receive the response “Goodbye,
     <username>!”, followed by the program exiting gracefully.
+
+# Node.js Help:
