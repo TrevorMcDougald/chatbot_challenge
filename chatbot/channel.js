@@ -12,7 +12,7 @@ function getResponse(query) {
   }))
 }
 
-class Message {
+class Channel {
 
   static async promptedMessage(prompt) {
     const response = await getResponse(prompt);
@@ -24,6 +24,10 @@ class Message {
     return response.toLowerCase();
   }
 
+  static botMessage(message) {
+    process.stdout.write(message);
+  }
+
 }
 
-module.exports = Message;
+module.exports = Channel;

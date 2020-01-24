@@ -3,7 +3,7 @@
 // mere production of new events.
 
 const EventEmitter = require('events').EventEmitter;
-const Message = require('./message');
+const Channel = require('./channel');
 const database = require('../database/database');
 
 const chatDB = database.load();
@@ -16,10 +16,9 @@ class ChatBot extends EventEmitter {
   }
 
   async connect() {
-    process.stdout.write('Welcome to Routefusion Chat!\n\n');
-    // this.user = await this.getUser();
+    Channel.botMessage('Welcome to Routefusion Chat!\n\n');
     this.user = await this.setUser();
-    await this.greetUser();
+    this.greetUser();
   }
 
   async run() {
@@ -52,7 +51,7 @@ class ChatBot extends EventEmitter {
   }
 
   async setUser() {
-    return Message.promptedMessage('What\'s your username?\n\n> ');
+    return Channel.promptedMessage('What\'s your username?\n\n> ');
   }
 
   saveUser(user) {
@@ -61,17 +60,17 @@ class ChatBot extends EventEmitter {
     }
   }
 
-  async greetUser() {
-    process.stdout.write(`\nHello, ${this.user}!\n\n`);
+  greetUser() {
+    Channel.botMessage(`\nHello, ${this.user}!\n\n`)
   }
 
   async getMessage() {
-    return Message.unpromptedMessage();
+    return Channel.unpromptedMessage();
   }
 
   exit() {
     this.saveUser(this.user);
-    process.stdout.write(`\nGoodbye, ${this.user}!\n\n`);
+    Channel.botMessage(`\nGoodbye, ${this.user}!\n\n`);
     database.save(chatDB);
     process.exit(0);
   }
